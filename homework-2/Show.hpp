@@ -1,10 +1,11 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <sstream>
 
 using namespace std;
 
-enum properties {
+const enum properties {
     SHOW_ID,
     TYPE,
     TITLE,
@@ -50,7 +51,7 @@ class Show {
 public:
 /*---------- Constructors ----------*/
 
-    Show() {}
+    Show() = default;
 /*---------- Getters/Setters ----------*/
 
     string getShowId();
@@ -93,4 +94,9 @@ public:
     void addCast(string actor);
 
     void addListedIn(string genere);
+
+    void setProperties(string properties);
+/*---------- toString ----------*/
+
+    string toString();
 };
